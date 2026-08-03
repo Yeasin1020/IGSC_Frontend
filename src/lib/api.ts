@@ -1,8 +1,10 @@
 import type { ApiErrorBody, ApiResponse } from "../types/api";
 
-const API_URL =
-  import.meta.env.VITE_API_URL?.replace(/\/$/, "") ||
-  "https://igsc-backend-gold.vercel.app/api/v1";
+/**
+ * Defaults to a same-origin path so requests are proxied by Vercel (see
+ * vercel.json) — that keeps the API on one origin and avoids CORS entirely.
+ */
+const API_URL = import.meta.env.VITE_API_URL?.replace(/\/$/, "") || "/api/v1";
 
 const ACCESS_TOKEN_KEY = "igsc_access_token";
 
@@ -41,6 +43,7 @@ const buildUrl = (
     path.startsWith("http")
       ? path
       : `${API_URL}${path.startsWith("/") ? path : `/${path}`}`,
+    window.location.origin,
   );
 
   if (query) {

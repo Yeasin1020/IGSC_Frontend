@@ -44,26 +44,26 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
   };
 
   return (
-    <div className="group relative overflow-hidden rounded-2xl border border-gray-100/50 bg-white shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:border-gray-800 dark:bg-gray-900 dark:shadow-black/20 dark:hover:shadow-black/40">
-      <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+    <div className="group relative overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-gray-800 dark:bg-gray-900">
+      <div className="absolute inset-x-0 top-0 h-0.5 bg-indigo-500 opacity-0 transition-opacity group-hover:opacity-100" />
 
-      <div className="absolute top-4 right-4 z-10 flex flex-col gap-1.5">
+      <div className="absolute top-3 right-3 z-10 flex flex-col gap-1">
         {isPopular && (
-          <span className="inline-flex items-center rounded-full border border-amber-200 bg-amber-100 px-2.5 py-1 text-[10px] font-bold text-amber-700 shadow-sm dark:border-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
+          <span className="inline-flex items-center rounded-md border border-amber-200 bg-amber-50 px-2 py-0.5 text-[10px] font-semibold text-amber-700 dark:border-amber-800 dark:bg-amber-950/40 dark:text-amber-300">
             Popular
           </span>
         )}
         {isNew && (
-          <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-100 px-2.5 py-1 text-[10px] font-bold text-emerald-700 shadow-sm dark:border-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">
+          <span className="inline-flex items-center rounded-md border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-700 dark:border-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-300">
             New
           </span>
         )}
       </div>
 
-      <div className="p-6 md:p-8">
-        <div className="mb-4 flex items-start gap-4">
-          <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-100 to-purple-100 text-2xl text-indigo-600 shadow-sm transition-transform duration-300 group-hover:scale-110 dark:from-indigo-900/50 dark:to-purple-900/50 dark:text-indigo-300">
-            {resolveIcon(iconKey, <FiStar className="h-6 w-6" />)}
+      <div className="p-5 md:p-6">
+        <div className="mb-4 flex items-start gap-3">
+          <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-md bg-indigo-50 text-xl text-indigo-600 dark:bg-indigo-950/50 dark:text-indigo-300">
+            {resolveIcon(iconKey, <FiStar className="h-5 w-5" />)}
           </div>
           <div className="min-w-0 flex-1">
             <p className="mb-1 text-xs font-medium tracking-wide text-indigo-500 uppercase dark:text-indigo-300">
@@ -100,13 +100,13 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
             {features.slice(0, 3).map((feature) => (
               <span
                 key={feature}
-                className="inline-block rounded-full border border-gray-200 bg-gray-100 px-2.5 py-0.5 text-[10px] font-medium text-gray-600 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300"
+                className="inline-block rounded-md border border-gray-200 bg-gray-50 px-2 py-0.5 text-[10px] font-medium text-gray-600 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300"
               >
                 {feature}
               </span>
             ))}
             {features.length > 3 && (
-              <span className="inline-block rounded-full border border-gray-200 bg-gray-100 px-2.5 py-0.5 text-[10px] font-medium text-gray-400 dark:border-gray-700 dark:bg-gray-800">
+              <span className="inline-block rounded-md border border-gray-200 bg-gray-50 px-2 py-0.5 text-[10px] font-medium text-gray-400 dark:border-gray-700 dark:bg-gray-800">
                 +{features.length - 3} more
               </span>
             )}
@@ -116,7 +116,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
         <div className="flex items-center justify-between border-t border-gray-100 pt-4 dark:border-gray-800">
           <div>
             {price > 0 ? (
-              <span className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+              <span className="text-xl font-bold text-gray-800 dark:text-gray-100">
                 ${price}
               </span>
             ) : (
@@ -125,7 +125,7 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
           </div>
           <Link
             to={`/services/${slug || _id}`}
-            className="inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            className="inline-flex items-center gap-1.5 rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-indigo-700"
           >
             Request
             <svg

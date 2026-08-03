@@ -92,7 +92,7 @@ const CommunityPage = () => {
             {communityPillars.map((pillar, index) => (
               <div
                 key={pillar.id}
-                className="rounded-2xl border border-gray-200 bg-white p-5 transition hover:border-emerald-200 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 dark:hover:border-emerald-900"
+                className="rounded-lg border border-gray-200 bg-white p-5 transition hover:border-emerald-200 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 dark:hover:border-emerald-900"
               >
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 dark:bg-emerald-950/50 dark:text-emerald-300">
                   {pillarIcons[index]}
@@ -129,7 +129,7 @@ const CommunityPage = () => {
             {featuredMembers.map((member) => (
               <article
                 key={member.id}
-                className="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-900"
+                className="flex flex-col rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-900"
               >
                 <div className="mb-4 flex items-start justify-between gap-3">
                   <div>
@@ -197,7 +197,7 @@ const CommunityPage = () => {
             {communityGroups.map((group) => (
               <div
                 key={group.id}
-                className="rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900"
+                className="rounded-lg border border-gray-200 bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900"
               >
                 <div className="mb-3 flex items-center justify-between">
                   <span className="rounded-full bg-cyan-50 px-2.5 py-1 text-xs font-semibold text-cyan-700 dark:bg-cyan-950/50 dark:text-cyan-300">
@@ -238,7 +238,7 @@ const CommunityPage = () => {
             {communityEvents.map((event) => (
               <article
                 key={event.id}
-                className="flex flex-col gap-4 rounded-2xl border border-gray-200 bg-white p-6 sm:flex-row sm:items-center dark:border-gray-800 dark:bg-gray-900"
+                className="flex flex-col gap-4 rounded-lg border border-gray-200 bg-white p-6 sm:flex-row sm:items-center dark:border-gray-800 dark:bg-gray-900"
               >
                 <div className="flex-1">
                   <div className="mb-2 flex flex-wrap items-center gap-2">
@@ -322,7 +322,7 @@ const CommunityPage = () => {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg md:p-8 dark:border-gray-800 dark:bg-gray-900">
+          <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-lg md:p-8 dark:border-gray-800 dark:bg-gray-900">
             <h3 className="mb-6 text-lg font-semibold text-gray-900 dark:text-white">
               Community join form
             </h3>

@@ -76,7 +76,7 @@ const InstitutionPartnership = () => {
   return (
     <section id="partnership" className="w-full bg-gray-50 py-10 lg:py-14 dark:bg-[#0b1220]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative grid grid-cols-1 gap-8 overflow-hidden rounded-3xl border border-white/10 bg-linear-to-br from-[#07101f] via-[#0d1b33] to-[#07101f] p-5 sm:p-7 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:rounded-[2.2rem] lg:p-10">
+        <div className="relative grid grid-cols-1 gap-8 overflow-hidden rounded-xl border border-white/10 bg-linear-to-br from-[#07101f] via-[#0d1b33] to-[#07101f] p-5 sm:p-7 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:p-10">
           <div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl" />
 
           <div className="relative z-10">
@@ -98,7 +98,7 @@ const InstitutionPartnership = () => {
               {institutionTypes.map((item) => (
                 <div
                   key={item.label}
-                  className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/70"
+                  className="flex items-center gap-2 rounded-md border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-white/70"
                 >
                   <span className="text-blue-300">{item.icon}</span>
                   {item.label}
@@ -116,7 +116,7 @@ const InstitutionPartnership = () => {
             </div>
           </div>
 
-          <div className="relative z-10 rounded-2xl border border-white/15 bg-white/10 p-4 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-xl sm:p-5 lg:p-6">
+          <div className="relative z-10 rounded-lg border border-white/15 bg-white/10 p-4 backdrop-blur-xl sm:p-5 lg:p-6">
             <div className="mb-4">
               <h3 className="text-[1.1rem] font-semibold text-white">
                 Request Partnership

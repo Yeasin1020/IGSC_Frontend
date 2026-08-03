@@ -11,7 +11,7 @@ const MissionAndVision = () => {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-6 flex justify-center">
-          <span className="inline-block rounded-full border border-indigo-100 bg-white/80 px-4 py-1.5 text-sm font-semibold text-indigo-600 shadow-sm backdrop-blur-sm dark:border-indigo-800 dark:bg-gray-900/80 dark:text-indigo-300">
+          <span className="inline-block rounded-md border border-indigo-100 bg-white/80 px-3 py-1 text-xs font-semibold tracking-wide text-indigo-600 uppercase dark:border-indigo-800 dark:bg-gray-900/80 dark:text-indigo-300">
             Our Guiding Principles
           </span>
         </div>
@@ -24,11 +24,11 @@ const MissionAndVision = () => {
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
-          <div className="group relative rounded-2xl border border-white/50 bg-white/90 shadow-xl backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl dark:border-gray-700 dark:bg-gray-900/90">
-            <div className="absolute inset-x-0 top-0 h-2 rounded-t-2xl bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500" />
-            <div className="p-6 md:p-8">
-              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white shadow-lg transition-transform duration-300 group-hover:scale-110">
-                <FiTarget className="h-6 w-6" />
+          <div className="group relative rounded-lg border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-gray-700 dark:bg-gray-900">
+            <div className="absolute inset-x-0 top-0 h-1 rounded-t-lg bg-indigo-500" />
+            <div className="p-5 md:p-7">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-md bg-indigo-600 text-white">
+                <FiTarget className="h-5 w-5" />
               </div>
               <h3 className="mb-2 text-2xl font-bold tracking-tight">
                 <span className="bg-gradient-to-r from-slate-800 to-slate-700 bg-clip-text text-transparent dark:from-white dark:to-slate-300">
@@ -53,7 +53,7 @@ const MissionAndVision = () => {
                 ].map((item) => (
                   <span
                     key={item}
-                    className="inline-flex items-center rounded-full border border-indigo-100 bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-700 dark:border-indigo-800 dark:bg-indigo-950/50 dark:text-indigo-300"
+                    className="inline-flex items-center rounded-md border border-indigo-100 bg-indigo-50 px-2 py-0.5 text-xs font-medium text-indigo-700 dark:border-indigo-800 dark:bg-indigo-950/50 dark:text-indigo-300"
                   >
                     {item}
                   </span>
@@ -62,11 +62,11 @@ const MissionAndVision = () => {
             </div>
           </div>
 
-          <div className="group relative rounded-2xl border border-white/50 bg-white/90 shadow-xl backdrop-blur-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl dark:border-gray-700 dark:bg-gray-900/90">
-            <div className="absolute inset-x-0 top-0 h-2 rounded-t-2xl bg-gradient-to-r from-teal-500 via-emerald-500 to-green-500" />
-            <div className="p-6 md:p-8">
-              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-teal-600 to-emerald-600 text-white shadow-lg transition-transform duration-300 group-hover:scale-110">
-                <FiEye className="h-6 w-6" />
+          <div className="group relative rounded-lg border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-gray-700 dark:bg-gray-900">
+            <div className="absolute inset-x-0 top-0 h-1 rounded-t-lg bg-teal-500" />
+            <div className="p-5 md:p-7">
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-md bg-teal-600 text-white">
+                <FiEye className="h-5 w-5" />
               </div>
               <div className="mb-2 flex flex-wrap items-baseline justify-between gap-2">
                 <h3 className="text-2xl font-bold tracking-tight">
@@ -74,7 +74,7 @@ const MissionAndVision = () => {
                     Our Vision
                   </span>
                 </h3>
-                <span className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-bold text-amber-700 dark:border-amber-700 dark:bg-amber-950/40 dark:text-amber-300">
+                <span className="inline-flex items-center rounded-md border border-amber-200 bg-amber-50 px-2.5 py-0.5 text-xs font-semibold text-amber-700 dark:border-amber-700 dark:bg-amber-950/40 dark:text-amber-300">
                   2035
                 </span>
               </div>
@@ -96,7 +96,7 @@ const MissionAndVision = () => {
                 ].map((item) => (
                   <span
                     key={item}
-                    className="inline-flex items-center rounded-full border border-teal-100 bg-teal-50 px-2.5 py-1 text-xs font-medium text-teal-700 dark:border-teal-800 dark:bg-teal-950/40 dark:text-teal-300"
+                    className="inline-flex items-center rounded-md border border-teal-100 bg-teal-50 px-2 py-0.5 text-xs font-medium text-teal-700 dark:border-teal-800 dark:bg-teal-950/40 dark:text-teal-300"
                   >
                     {item}
                   </span>

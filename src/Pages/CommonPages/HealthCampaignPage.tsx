@@ -112,7 +112,7 @@ const HealthCampaignPage = () => {
             {healthPrograms.map((program) => (
               <div
                 key={program.id}
-                className="group rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:border-rose-200 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900 dark:hover:border-rose-900"
+                className="group rounded-lg border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:border-rose-200 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900 dark:hover:border-rose-900"
               >
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-rose-50 text-rose-600 transition group-hover:scale-105 dark:bg-rose-950/50 dark:text-rose-300">
                   {programIcons[program.iconKey]}
@@ -148,7 +148,7 @@ const HealthCampaignPage = () => {
                   key={tab.key}
                   type="button"
                   onClick={() => setStatusFilter(tab.key)}
-                  className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+                  className={`rounded-md px-3.5 py-1.5 text-sm font-medium transition ${
                     statusFilter === tab.key
                       ? "bg-rose-600 text-white"
                       : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
@@ -161,7 +161,7 @@ const HealthCampaignPage = () => {
           </div>
 
           {filteredCampaigns.length === 0 ? (
-            <div className="rounded-2xl border border-dashed border-gray-200 py-16 text-center dark:border-gray-700">
+            <div className="rounded-lg border border-dashed border-gray-200 py-16 text-center dark:border-gray-700">
               <p className="text-gray-500 dark:text-gray-400">
                 No campaigns in this category right now.
               </p>
@@ -173,7 +173,7 @@ const HealthCampaignPage = () => {
                 return (
                   <article
                     key={campaign.id}
-                    className="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md dark:border-gray-800 dark:bg-gray-900"
+                    className="flex flex-col rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md dark:border-gray-800 dark:bg-gray-900"
                   >
                     <div className="mb-4 flex items-start justify-between gap-3">
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -258,7 +258,7 @@ const HealthCampaignPage = () => {
               ))}
             </ul>
 
-            <div className="mt-10 rounded-2xl border border-rose-100 bg-white/80 p-5 dark:border-rose-900/50 dark:bg-gray-900/80">
+            <div className="mt-10 rounded-lg border border-rose-100 bg-white/80 p-5 dark:border-rose-900/50 dark:bg-gray-900/80">
               <p className="text-sm font-semibold text-gray-900 dark:text-white">
                 Want to host a camp at your institution?
               </p>
@@ -276,7 +276,7 @@ const HealthCampaignPage = () => {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg md:p-8 dark:border-gray-800 dark:bg-gray-900">
+          <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-lg md:p-8 dark:border-gray-800 dark:bg-gray-900">
             <h3 className="mb-6 text-lg font-semibold text-gray-900 dark:text-white">
               Registration form
             </h3>

@@ -66,11 +66,11 @@ const WhyChooseIGSC = () => {
             {featureBlocks.map((item, index) => (
               <div
                 key={item.title}
-                className={`group rounded-[1.6rem] border border-slate-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-blue-100 hover:shadow-xl sm:p-6 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-blue-900 ${
+                className={`group rounded-lg border border-slate-200 bg-white p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md sm:p-6 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-blue-900 ${
                   index >= 2 ? "sm:col-span-2" : ""
                 }`}
               >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition-all duration-300 group-hover:scale-105 dark:bg-blue-950/50 dark:text-blue-300">
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-md bg-blue-50 text-blue-600 dark:bg-blue-950/50 dark:text-blue-300">
                   {item.icon}
                 </div>
                 <h3 className="mb-2 text-[1rem] font-semibold text-slate-900 sm:text-[1.05rem] dark:text-white">
@@ -85,7 +85,7 @@ const WhyChooseIGSC = () => {
 
           {/* RIGHT SIDE */}
           <div>
-            <div className="mb-5 inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-[11px] font-semibold tracking-[0.16em] text-blue-700 uppercase dark:border-blue-900 dark:bg-blue-950/40 dark:text-blue-300">
+            <div className="mb-5 inline-flex items-center rounded-md border border-blue-100 bg-blue-50 px-3 py-1.5 text-[11px] font-semibold tracking-[0.14em] text-blue-700 uppercase dark:border-blue-900 dark:bg-blue-950/40 dark:text-blue-300">
               Why IGSC
             </div>
 
@@ -106,7 +106,7 @@ const WhyChooseIGSC = () => {
               {highlights.map((item) => (
                 <div key={item.title} className="flex gap-4">
                   <div
-                    className={`mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-full ${
+                    className={`mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-md ${
                       item.color === "blue"
                         ? "bg-blue-100 text-blue-600 dark:bg-blue-950/60 dark:text-blue-300"
                         : item.color === "emerald"
@@ -130,11 +130,11 @@ const WhyChooseIGSC = () => {
 
             <div className="mt-10">
               <Link to="/courses">
-                <button className="group inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-xl">
+                <button className="group inline-flex items-center gap-2 rounded-md bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-700">
                   Start Learning
                   <HiArrowLongRight
                     size={18}
-                    className="transition-transform duration-300 group-hover:translate-x-1"
+                    className="transition-transform duration-300 group-hover:translate-x-0.5"
                   />
                 </button>
               </Link>

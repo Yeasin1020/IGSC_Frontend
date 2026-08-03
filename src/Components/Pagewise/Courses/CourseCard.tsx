@@ -10,8 +10,8 @@ const CourseCard = ({ course }: { course: Course }) => {
       : null;
 
   return (
-    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-gray-800 dark:bg-gray-900 dark:shadow-black/20 dark:hover:shadow-black/40">
-      <div className="relative h-44 bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-700">
+    <article className="group flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-gray-800 dark:bg-gray-900">
+      <div className="relative h-40 bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-700">
         {course.thumbnail ? (
           <img
             src={course.thumbnail}
@@ -20,17 +20,17 @@ const CourseCard = ({ course }: { course: Course }) => {
           />
         ) : (
           <div className="flex h-full items-center justify-center text-white/80">
-            <FiBookOpen size={42} />
+            <FiBookOpen size={36} />
           </div>
         )}
-        <div className="absolute top-3 left-3 flex gap-2">
+        <div className="absolute top-3 left-3 flex gap-1.5">
           {course.isPopular && (
-            <span className="rounded-full bg-amber-100 px-2.5 py-1 text-[10px] font-bold text-amber-700 dark:bg-amber-900/70 dark:text-amber-200">
+            <span className="rounded-md bg-amber-100 px-2 py-0.5 text-[10px] font-semibold text-amber-700 dark:bg-amber-900/70 dark:text-amber-200">
               Popular
             </span>
           )}
           {course.isNew && (
-            <span className="rounded-full bg-emerald-100 px-2.5 py-1 text-[10px] font-bold text-emerald-700 dark:bg-emerald-900/70 dark:text-emerald-200">
+            <span className="rounded-md bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold text-emerald-700 dark:bg-emerald-900/70 dark:text-emerald-200">
               New
             </span>
           )}
@@ -69,7 +69,7 @@ const CourseCard = ({ course }: { course: Course }) => {
                 ${course.price}
               </span>
             ) : (
-              <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-semibold text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">
+              <span className="rounded-md bg-emerald-50 px-2 py-0.5 text-xs font-semibold text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">
                 Free enrollment
               </span>
             )}
@@ -81,7 +81,7 @@ const CourseCard = ({ course }: { course: Course }) => {
           </div>
           <Link
             to={`/courses/${course.slug || course._id}`}
-            className="rounded-xl bg-indigo-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-indigo-700"
+            className="rounded-md bg-indigo-600 px-3.5 py-2 text-sm font-semibold text-white transition hover:bg-indigo-700"
           >
             Enroll
           </Link>

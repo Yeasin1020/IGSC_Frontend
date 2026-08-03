@@ -34,13 +34,14 @@ body {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.active {
+/* Legacy daisy menu active — scoped so custom nav classes aren't overridden */
+.menu .active {
   color: white;
-  font-weight: bold;
-  background-color: black;
+  font-weight: 600;
+  background-color: #0f172a;
 }
 
-.dark .active {
+.dark .menu .active {
   color: #0b1220;
   background-color: #e5e7eb;
 }

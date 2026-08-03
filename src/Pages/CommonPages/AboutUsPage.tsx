@@ -84,8 +84,8 @@ const AboutUsPage = () => {
           </div>
 
           <div className="relative">
-            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-indigo-100 to-purple-100 opacity-60 blur-2xl dark:from-indigo-950/40 dark:to-purple-950/40" />
-            <div className="relative rounded-2xl border border-gray-200 bg-white p-8 shadow-xl dark:border-gray-800 dark:bg-gray-900">
+            <div className="absolute -inset-4 rounded-xl bg-gradient-to-br from-indigo-100 to-purple-100 opacity-60 blur-2xl dark:from-indigo-950/40 dark:to-purple-950/40" />
+            <div className="relative rounded-lg border border-gray-200 bg-white p-8 shadow-xl dark:border-gray-800 dark:bg-gray-900">
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                 What drives us
               </h3>
@@ -135,7 +135,7 @@ const AboutUsPage = () => {
             {coreValues.map((value, index) => (
               <div
                 key={value.title}
-                className="rounded-2xl border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900"
+                className="rounded-lg border border-gray-200 bg-white p-6 transition hover:-translate-y-1 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900"
               >
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 dark:bg-indigo-950/50 dark:text-indigo-300">
                   {valueIcons[index]}
@@ -168,7 +168,7 @@ const AboutUsPage = () => {
             {whatWeDo.map((item) => (
               <div
                 key={item.title}
-                className="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 transition hover:border-indigo-200 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 dark:hover:border-indigo-900"
+                className="group flex flex-col rounded-lg border border-gray-200 bg-white p-6 transition hover:border-indigo-200 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 dark:hover:border-indigo-900"
               >
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                   {item.title}

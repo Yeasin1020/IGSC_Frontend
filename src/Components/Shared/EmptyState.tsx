@@ -5,7 +5,7 @@ const EmptyState = ({
   title: string;
   description?: string;
 }) => (
-  <div className="rounded-2xl border border-dashed border-gray-200 bg-white px-6 py-14 text-center dark:border-gray-700 dark:bg-gray-900">
+  <div className="rounded-lg border border-dashed border-gray-200 bg-white px-6 py-14 text-center dark:border-gray-700 dark:bg-gray-900">
     <p className="text-lg font-semibold text-gray-700 dark:text-gray-100">
       {title}
     </p>

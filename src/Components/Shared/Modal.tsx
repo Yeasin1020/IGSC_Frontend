@@ -21,7 +21,7 @@ const Modal = ({ open, title, onClose, children, wide }: ModalProps) => {
         onClick={onClose}
       />
       <div
-        className={`relative z-10 w-full ${wide ? "max-w-3xl" : "max-w-lg"} max-h-[90vh] overflow-y-auto rounded-2xl bg-white shadow-2xl dark:bg-gray-900 dark:text-gray-100`}
+        className={`relative z-10 w-full ${wide ? "max-w-3xl" : "max-w-lg"} max-h-[90vh] overflow-y-auto rounded-lg bg-white shadow-xl dark:bg-gray-900 dark:text-gray-100`}
       >
         <div className="sticky top-0 flex items-center justify-between border-b border-gray-100 bg-white px-5 py-4 dark:border-gray-800 dark:bg-gray-900">
           <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">

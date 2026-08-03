@@ -109,7 +109,7 @@ const ServiceDetailPage = () => {
 
       <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
-          <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-indigo-50 text-2xl text-indigo-600 dark:bg-indigo-950/50 dark:text-indigo-300">
+          <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-lg bg-indigo-50 text-2xl text-indigo-600 dark:bg-indigo-950/50 dark:text-indigo-300">
             {resolveIcon(service.iconKey)}
           </div>
           <p className="text-sm font-semibold tracking-wide text-indigo-500 uppercase dark:text-indigo-300">
@@ -154,7 +154,7 @@ const ServiceDetailPage = () => {
           </div>
         </div>
 
-        <aside className="h-fit rounded-2xl border border-gray-100 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+        <aside className="h-fit rounded-lg border border-gray-100 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900">
           <h2 className="text-xl font-bold text-gray-900 dark:text-white">
             Request this service
           </h2>

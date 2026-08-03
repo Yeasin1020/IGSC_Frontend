@@ -70,14 +70,14 @@ const TestimonialCard = ({ testimonial, index }: Props) => {
 
   return (
     <div
-      className={`relative rounded-2xl border border-gray-200 border-t-4 bg-white p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg md:p-6 dark:border-gray-700 dark:bg-gray-900 dark:hover:shadow-black/30 ${style.accent}`}
+      className={`relative rounded-lg border border-gray-200 border-t-2 bg-white p-5 transition hover:-translate-y-0.5 hover:shadow-md md:p-6 dark:border-gray-700 dark:bg-gray-900 ${style.accent}`}
     >
       <div className="mb-3 flex items-center justify-between">
         <div className={`flex items-center gap-1 text-sm ${style.stars}`}>
           {renderStars()}
         </div>
         <div
-          className={`rounded-full border px-2 py-0.5 text-[11px] font-semibold ${style.badge}`}
+          className={`rounded-md border px-2 py-0.5 text-[11px] font-semibold ${style.badge}`}
         >
           {rating.toFixed(1)}
         </div>

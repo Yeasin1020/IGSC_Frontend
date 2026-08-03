@@ -60,7 +60,7 @@ const CoursesPage = () => {
             <button
               type="button"
               onClick={() => setActiveCategory("all")}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+              className={`rounded-md px-3.5 py-1.5 text-sm font-medium transition ${
                 activeCategory === "all"
                   ? "bg-indigo-600 text-white"
                   : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
@@ -73,7 +73,7 @@ const CoursesPage = () => {
                 key={category._id}
                 type="button"
                 onClick={() => setActiveCategory(category.slug)}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+                className={`rounded-md px-3.5 py-1.5 text-sm font-medium transition ${
                   activeCategory === category.slug
                     ? "bg-indigo-600 text-white"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
@@ -91,7 +91,7 @@ const CoursesPage = () => {
             <select
               value={level}
               onChange={(e) => setLevel(e.target.value)}
-              className="rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm outline-none focus:border-indigo-400 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100"
+              className="rounded-md border border-gray-200 bg-white px-3.5 py-2 text-sm outline-none focus:border-indigo-400 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100"
             >
               <option value="">All levels</option>
               <option value="beginner">Beginner</option>
@@ -103,7 +103,7 @@ const CoursesPage = () => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search courses..."
-              className="w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm outline-none focus:border-indigo-400 sm:w-64 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100"
+              className="w-full rounded-md border border-gray-200 bg-white px-3.5 py-2 text-sm outline-none focus:border-indigo-400 sm:w-64 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100"
             />
           </div>
         </div>

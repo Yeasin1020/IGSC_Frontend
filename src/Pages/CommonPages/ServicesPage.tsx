@@ -57,7 +57,7 @@ const ServicesPage = () => {
             <button
               type="button"
               onClick={() => setActiveCategory("all")}
-              className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+              className={`rounded-md px-3.5 py-1.5 text-sm font-medium transition ${
                 activeCategory === "all"
                   ? "bg-indigo-600 text-white"
                   : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
@@ -70,7 +70,7 @@ const ServicesPage = () => {
                 key={category._id}
                 type="button"
                 onClick={() => setActiveCategory(category.slug)}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+                className={`rounded-md px-3.5 py-1.5 text-sm font-medium transition ${
                   activeCategory === category.slug
                     ? "bg-indigo-600 text-white"
                     : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
