@@ -54,6 +54,39 @@ const buildUrl = (
   return url.toString();
 };
 
+const REQUEST_TIMEOUT_MS = 20000;
+
+/**
+ * The API runs on serverless functions, so the first call after an idle period
+ * can be slow or drop. Retry those once before surfacing an error.
+ */
+async function fetchWithRetry(
+  url: string,
+  init: RequestInit,
+  attempt = 0,
+): Promise<Response> {
+  try {
+    return await fetch(url, {
+      ...init,
+      signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
+    });
+  } catch (error) {
+    const retryable = init.method === undefined || init.method === "GET";
+    if (retryable && attempt < 1) {
+      await new Promise((resolve) => setTimeout(resolve, 1200));
+      return fetchWithRetry(url, init, attempt + 1);
+    }
+    throw new ApiError({
+      success: false,
+      statusCode: 0,
+      message:
+        error instanceof DOMException && error.name === "TimeoutError"
+          ? "Server took too long to respond. Please try again."
+          : "Could not reach the server. Check your connection and try again.",
+    });
+  }
+}
+
 export async function apiRequest<T>(
   path: string,
   options: RequestOptions = {},
@@ -72,7 +105,7 @@ export async function apiRequest<T>(
     headers.Authorization = `Bearer ${token}`;
   }
 
-  const response = await fetch(buildUrl(path, query), {
+  const response = await fetchWithRetry(buildUrl(path, query), {
     method,
     headers,
     credentials: "include",
