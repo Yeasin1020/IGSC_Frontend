@@ -2,7 +2,7 @@ import type { ApiErrorBody, ApiResponse } from "../types/api";
 
 const API_URL =
   import.meta.env.VITE_API_URL?.replace(/\/$/, "") ||
-  "https://igsc-backend-qf2o1dh1r-yeasin1020s-projects.vercel.app/api/v1";
+  "https://igsc-backend.vercel.app/api/v1";
 
 const ACCESS_TOKEN_KEY = "igsc_access_token";
 
