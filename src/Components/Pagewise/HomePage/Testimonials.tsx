@@ -52,6 +52,8 @@ const Testimonials = () => {
             centeredSlides={true}
             loop={testimonials.length > 2}
             grabCursor={true}
+            touchReleaseOnEdges
+            threshold={12}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
@@ -65,8 +67,10 @@ const Testimonials = () => {
             breakpoints={{
               0: { slidesPerView: 1, effect: "slide" },
               640: { slidesPerView: 1.2, effect: "slide" },
-              768: {
-                slidesPerView: 2,
+              // Coverflow only on real desktops — phone landscape hits md width
+              // but has short height, and coverflow clips / blocks scroll.
+              1024: {
+                slidesPerView: 2.4,
                 effect: "coverflow",
                 coverflowEffect: {
                   rotate: 18,
@@ -76,7 +80,7 @@ const Testimonials = () => {
                   slideShadows: false,
                 },
               },
-              1024: {
+              1280: {
                 slidesPerView: 3,
                 effect: "coverflow",
                 coverflowEffect: {
@@ -88,7 +92,7 @@ const Testimonials = () => {
                 },
               },
             }}
-            className="py-10"
+            className="overflow-visible py-6 sm:py-10"
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide

@@ -22,16 +22,38 @@
   --border: #374151;
 }
 
-html,
-body,
-#root {
+html {
+  /* Prefer dynamic viewport on mobile landscape / notches */
   min-height: 100%;
+  min-height: 100dvh;
+  overflow-x: clip;
+  overflow-y: auto;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
+  min-height: 100%;
+  min-height: 100dvh;
+  overflow-x: clip;
+  overflow-y: auto;
+  overscroll-behavior-y: auto;
+  -webkit-overflow-scrolling: touch;
   background-color: var(--page-bg);
   color: var(--page-fg);
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#root {
+  min-height: 100%;
+  min-height: 100dvh;
+  overflow-x: clip;
+}
+
+/* Short landscape phones: keep sections usable and avoid clipping cards */
+@media (orientation: landscape) and (max-height: 500px) {
+  .carousel .slide {
+    max-height: 220px !important;
+  }
 }
 
 /* Legacy daisy menu active — scoped so custom nav classes aren't overridden */

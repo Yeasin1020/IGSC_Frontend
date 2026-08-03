@@ -58,16 +58,16 @@ const WhyChooseIGSC = () => {
   ];
 
   return (
-    <section className="w-full bg-slate-50 py-16 sm:py-20 lg:py-24 dark:bg-[#0b1220]">
+    <section className="w-full bg-slate-50 py-10 sm:py-16 lg:py-24 dark:bg-[#0b1220]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
-          {/* LEFT SIDE */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 items-start gap-8 sm:gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:gap-20">
+          {/* LEFT SIDE — keep 1 col under short landscape so cards stay readable */}
+          <div className="grid grid-cols-1 gap-3 min-[480px]:grid-cols-2 min-[480px]:gap-4">
             {featureBlocks.map((item, index) => (
               <div
                 key={item.title}
-                className={`group rounded-lg border border-slate-200 bg-white p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md sm:p-6 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-blue-900 ${
-                  index >= 2 ? "sm:col-span-2" : ""
+                className={`group rounded-lg border border-slate-200 bg-white p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md sm:p-5 lg:p-6 dark:border-gray-800 dark:bg-gray-900 dark:hover:border-blue-900 ${
+                  index >= 2 ? "min-[480px]:col-span-2" : ""
                 }`}
               >
                 <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-md bg-blue-50 text-blue-600 dark:bg-blue-950/50 dark:text-blue-300">

@@ -2,7 +2,7 @@ import { FiTarget, FiEye } from "react-icons/fi";
 
 const MissionAndVision = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-indigo-50/50 py-12 md:py-20 dark:from-gray-950 dark:via-gray-900 dark:to-indigo-950/40">
+    <section className="relative overflow-x-clip bg-gradient-to-br from-slate-50 via-white to-indigo-50/50 py-10 sm:py-12 md:py-20 dark:from-gray-950 dark:via-gray-900 dark:to-indigo-950/40">
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-indigo-200/40 blur-3xl dark:bg-indigo-500/10" />
         <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-teal-200/40 blur-3xl dark:bg-teal-500/10" />
